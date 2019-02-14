@@ -10,6 +10,13 @@
 		108594A721FF18E10082BDF2 /* NetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1085949D21FF18E10082BDF2 /* NetKit.framework */; };
 		108594AC21FF18E10082BDF2 /* NetKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108594AB21FF18E10082BDF2 /* NetKitTests.swift */; };
 		108594AE21FF18E10082BDF2 /* NetKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 108594A021FF18E10082BDF2 /* NetKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E0430F21FF58AC00A68DB1 /* NetKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0430B21FF58AB00A68DB1 /* NetKit.swift */; };
+		10E0431021FF58AC00A68DB1 /* NetKit+Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0430C21FF58AB00A68DB1 /* NetKit+Requestable.swift */; };
+		10E0431121FF58AC00A68DB1 /* NetKit+Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0430D21FF58AC00A68DB1 /* NetKit+Typealias.swift */; };
+		10E0431221FF58AC00A68DB1 /* NetKit+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0430E21FF58AC00A68DB1 /* NetKit+Promises.swift */; };
+		4C958C089C104EF5A4511D7F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6648F2D48B4918B15F4AB6 /* Alamofire.framework */; };
+		8374EA1C6F45494C9A1F1465 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6648F2D48B4918B15F4AB6 /* Alamofire.framework */; };
+		C91F616F872D43DDA14CD14F /* Alamofire.framework in [XMan Copy Framework] */ = {isa = PBXBuildFile; fileRef = 8B6648F2D48B4918B15F4AB6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +29,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F7529FD01274430C839D0ED4 /* [XMan Copy Framework] */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C91F616F872D43DDA14CD14F /* Alamofire.framework in [XMan Copy Framework] */,
+			);
+			name = "[XMan Copy Framework]";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1085949D21FF18E10082BDF2 /* NetKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		108594A021FF18E10082BDF2 /* NetKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetKit.h; sourceTree = "<group>"; };
@@ -29,6 +50,11 @@
 		108594A621FF18E10082BDF2 /* NetKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		108594AB21FF18E10082BDF2 /* NetKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetKitTests.swift; sourceTree = "<group>"; };
 		108594AD21FF18E10082BDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E0430B21FF58AB00A68DB1 /* NetKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetKit.swift; sourceTree = "<group>"; };
+		10E0430C21FF58AB00A68DB1 /* NetKit+Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetKit+Requestable.swift"; sourceTree = "<group>"; };
+		10E0430D21FF58AC00A68DB1 /* NetKit+Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetKit+Typealias.swift"; sourceTree = "<group>"; };
+		10E0430E21FF58AC00A68DB1 /* NetKit+Promises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetKit+Promises.swift"; sourceTree = "<group>"; };
+		8B6648F2D48B4918B15F4AB6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C958C089C104EF5A4511D7F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				108594A721FF18E10082BDF2 /* NetKit.framework in Frameworks */,
+				8374EA1C6F45494C9A1F1465 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +84,7 @@
 				1085949F21FF18E10082BDF2 /* NetKit */,
 				108594AA21FF18E10082BDF2 /* NetKitTests */,
 				1085949E21FF18E10082BDF2 /* Products */,
+				20EA9E699D7C4CFF90C1C004 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				108594A021FF18E10082BDF2 /* NetKit.h */,
+				10E0430B21FF58AB00A68DB1 /* NetKit.swift */,
+				10E0430E21FF58AC00A68DB1 /* NetKit+Promises.swift */,
+				10E0430D21FF58AC00A68DB1 /* NetKit+Typealias.swift */,
+				10E0430C21FF58AB00A68DB1 /* NetKit+Requestable.swift */,
 				108594A121FF18E10082BDF2 /* Info.plist */,
 			);
 			path = NetKit;
@@ -84,6 +117,22 @@
 				108594AD21FF18E10082BDF2 /* Info.plist */,
 			);
 			path = NetKitTests;
+			sourceTree = "<group>";
+		};
+		20EA9E699D7C4CFF90C1C004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDFCF06381A4CB48DD4258E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBDFCF06381A4CB48DD4258E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B6648F2D48B4918B15F4AB6 /* Alamofire.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +174,7 @@
 				108594A221FF18E10082BDF2 /* Sources */,
 				108594A321FF18E10082BDF2 /* Frameworks */,
 				108594A421FF18E10082BDF2 /* Resources */,
+				F7529FD01274430C839D0ED4 /* [XMan Copy Framework] */,
 			);
 			buildRules = (
 			);
@@ -148,6 +198,7 @@
 				TargetAttributes = {
 					1085949C21FF18E10082BDF2 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					108594A521FF18E10082BDF2 = {
 						CreatedOnToolsVersion = 10.2;
@@ -194,6 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E0431121FF58AC00A68DB1 /* NetKit+Typealias.swift in Sources */,
+				10E0431221FF58AC00A68DB1 /* NetKit+Promises.swift in Sources */,
+				10E0430F21FF58AC00A68DB1 /* NetKit.swift in Sources */,
+				10E0431021FF58AC00A68DB1 /* NetKit+Requestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,14 +396,20 @@
 		108594B221FF18E10082BDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.selfstudio.NetKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,14 +427,20 @@
 		108594B321FF18E10082BDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +457,12 @@
 		108594B521FF18E10082BDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,7 +479,12 @@
 		108594B621FF18E10082BDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NetKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
