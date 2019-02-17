@@ -1,7 +1,7 @@
 #if canImport(Promises)
     import Promises
 
-    public extension FlyRequestable {
+    public extension NetKitRequestable {
         func execute<T: Decodable>() -> Promise<T> {
             return Promise<T>({ success, failure in
                 let hanlder: (Result<T>) -> Void = { result in
