@@ -9,6 +9,7 @@ public final class NetKit {
     public var process: (NetworkResponse) -> NetworkResponse = { $0 }
     public var decoder = JSONDecoder()
     public var session = Session()
+    public init() { }
 }
 
 extension NetKit: RequestableConfiguration {}
