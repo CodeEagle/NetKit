@@ -1,21 +1,21 @@
 import Alamofire
 import Foundation
 
-public final class NetKit {
-    public var mockPolicy: MockPolicy = .never
+public final class NetKitRequestConfiguration {
+    public var mockPolicy: NetKit.MockPolicy = .never
     public var prepare: (URLRequest) -> URLRequest = { $0 }
     public var willSend: (URLRequest) -> Void = { _ in }
-    public var didRecieve: (NetworkResponse) -> Void = { _ in }
+    public var didReceive: (NetworkResponse) -> Void = { _ in }
     public var process: (NetworkResponse) -> NetworkResponse = { $0 }
     public var decoder = JSONDecoder()
     public var session = Session()
     public init() { }
 }
 
-extension NetKit: RequestableConfiguration {}
+extension NetKitRequestConfiguration: RequestableConfiguration {}
 
-public extension NetKit {
-    enum MockPolicy {
+public final class NetKit {
+    public enum MockPolicy {
         case never
         case custom(MockDataConstructor)
 
@@ -40,12 +40,12 @@ public extension NetKit {
         }
     }
 
-    enum NetworkError: Error {
+    public enum NetworkError: Error {
         case dataIsNil(NetworkResponse)
         case info(Error, NetworkResponse)
     }
 
-    enum StubError: Error, CustomNSError {
+    public enum StubError: Error, CustomNSError {
         case timeout(Int)
 
         private var _seconds: Int {

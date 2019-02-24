@@ -4,7 +4,7 @@ import Foundation
 public protocol RequestableConfiguration {
     var prepare: (URLRequest) -> URLRequest { get }
     var willSend: (URLRequest) -> Void { get }
-    var didRecieve: (NetworkResponse) -> Void { get }
+    var didReceive: (NetworkResponse) -> Void { get }
     var process: (NetworkResponse) -> NetworkResponse { get }
     var mockPolicy: NetKit.MockPolicy { get }
     var decoder: JSONDecoder { get }
@@ -58,7 +58,7 @@ public extension NetKitRequestable {
         let ret = configuration.session.request(req).response { [conf = configuration] resp in
             let response: NetworkResponse = (resp.request, resp.response, resp.data)
             let modifiedResponse = conf.process(response)
-            conf.didRecieve(modifiedResponse)
+            conf.didReceive(modifiedResponse)
 
             guard let v = modifiedResponse.2 else {
                 let err = AFError.responseValidationFailed(reason: AFError.ResponseValidationFailureReason.dataFileNil)
@@ -90,7 +90,7 @@ public extension NetKitRequestable {
             let result: Result<T>
             do {
                 let raw: NetworkResponse = (req, nil, data)
-                configuration.didRecieve(raw)
+                configuration.didReceive(raw)
                 let resp = configuration.process(raw)
                 let decoder = configuration.decoder
                 if let d = resp.2 {
