@@ -9,10 +9,13 @@ public final class NetKitRequestConfiguration {
     public var process: (NetworkResponse) -> NetworkResponse = { $0 }
     public var decoder = JSONDecoder()
     public var session = Session()
+    public func errorHandler<T>(error: Error, resp: NetworkResponse, request: URLRequest, completion: @escaping (Result<T>) -> Void) where T : Decodable {
+        DispatchQueue.main.async {
+            completion(.failure(error))
+        }
+    }
     public init() { }
 }
-
-extension NetKitRequestConfiguration: RequestableConfiguration {}
 
 public final class NetKit {
     public enum MockPolicy {
