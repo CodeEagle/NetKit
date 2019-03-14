@@ -9,7 +9,7 @@ public protocol RequestableConfiguration {
     var mockPolicy: NetKit.MockPolicy { get }
     var decoder: JSONDecoder { get }
     var session: Session { get }
-    func errorHandler<T: Decodable>(error: Error, resp: NetworkResponse, request: URLRequest, completion: @escaping (Result<T>) -> Void)
+    func errorHandler<T: Decodable>(error: Error, resp: NetworkResponse, request: NetKitRequestable, completion: @escaping (Result<T>) -> Void)
 }
 
 public protocol NetKitRequestable {
@@ -75,7 +75,7 @@ public extension NetKitRequestable {
                 let r: Result<T> = Result.success(model)
                 DispatchQueue.main.async { complete(r) }
             } catch {
-                conf.errorHandler(error: error, resp: response, request: req, completion: complete)
+                conf.errorHandler(error: error, resp: response, request: self, completion: complete)
             }
         }
         return ret

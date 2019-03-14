@@ -9,7 +9,7 @@ open class NetKitRequestConfiguration: RequestableConfiguration {
     open var process: (NetworkResponse) -> NetworkResponse = { $0 }
     open var decoder = JSONDecoder()
     open var session = Session()
-    open func errorHandler<T>(error: Error, resp: NetworkResponse, request: URLRequest, completion: @escaping (Result<T>) -> Void) where T : Decodable {
+    open func errorHandler<T>(error: Error, resp: NetworkResponse, request: NetKitRequestable, completion: @escaping (Result<T>) -> Void) where T : Decodable {
         DispatchQueue.main.async {
             completion(.failure(error))
         }
