@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-public final class NetKitRequestConfiguration {
+public final class NetKitRequestConfiguration: RequestableConfiguration {
     public var mockPolicy: NetKit.MockPolicy = .never
     public var prepare: (URLRequest) -> URLRequest = { $0 }
     public var willSend: (URLRequest) -> Void = { _ in }
