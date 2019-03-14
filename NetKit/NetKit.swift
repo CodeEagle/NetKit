@@ -1,15 +1,15 @@
 import Alamofire
 import Foundation
 
-public final class NetKitRequestConfiguration: RequestableConfiguration {
-    public var mockPolicy: NetKit.MockPolicy = .never
-    public var prepare: (URLRequest) -> URLRequest = { $0 }
-    public var willSend: (URLRequest) -> Void = { _ in }
-    public var didReceive: (NetworkResponse) -> Void = { _ in }
-    public var process: (NetworkResponse) -> NetworkResponse = { $0 }
-    public var decoder = JSONDecoder()
-    public var session = Session()
-    public func errorHandler<T>(error: Error, resp: NetworkResponse, request: URLRequest, completion: @escaping (Result<T>) -> Void) where T : Decodable {
+open class NetKitRequestConfiguration: RequestableConfiguration {
+    open var mockPolicy: NetKit.MockPolicy = .never
+    open var prepare: (URLRequest) -> URLRequest = { $0 }
+    open var willSend: (URLRequest) -> Void = { _ in }
+    open var didReceive: (NetworkResponse) -> Void = { _ in }
+    open var process: (NetworkResponse) -> NetworkResponse = { $0 }
+    open var decoder = JSONDecoder()
+    open var session = Session()
+    open func errorHandler<T>(error: Error, resp: NetworkResponse, request: URLRequest, completion: @escaping (Result<T>) -> Void) where T : Decodable {
         DispatchQueue.main.async {
             completion(.failure(error))
         }
