@@ -22,8 +22,8 @@ public protocol NetKitRequestable {
 }
 
 public extension NetKitRequestable {
-    var method: HTTPMethod { return .get }
-    var params: [String: Any] { return [:] }
+    var method: HTTPMethod { .get }
+    var params: [String: Any] { [:] }
     var paramEncoding: ParameterEncoding {
         switch method {
         case .get: return URLEncoding()

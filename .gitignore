@@ -71,3 +71,4 @@ fastlane/test_output
 Cartfile.configuration
 Cartfile.resolved
 xman.yaml
+.swiftpm
