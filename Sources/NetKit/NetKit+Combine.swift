@@ -27,13 +27,13 @@ public extension NetKitRequestable {
 public final class AnySubscription: Subscription {
     private let cancellable: Cancellable
     
-    init(_ cancel: @escaping () -> Void) {
+    public init(_ cancel: @escaping () -> Void) {
         cancellable = AnyCancellable(cancel)
     }
     
-    func request(_ demand: Subscribers.Demand) {}
+    public func request(_ demand: Subscribers.Demand) {}
     
-    func cancel() {
+    public func cancel() {
         cancellable.cancel()
     }
 }

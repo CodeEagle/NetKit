@@ -30,6 +30,6 @@ let package = Package(
         .testTarget(
             name: "NetKitTests",
             dependencies: ["NetKit"]),
-    ],
-    swiftLanguageVersions: [.version("5.1")]
+    ]//,
+    //swiftLanguageVersions: [.version("5.1")]
 )
